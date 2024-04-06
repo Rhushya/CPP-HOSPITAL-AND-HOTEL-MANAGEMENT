@@ -32,8 +32,8 @@ void savePatientsToFile(const vector<Patient> &patients)
     {
         for (const auto &patient : patients)
         {
-            outFile << patient.name << " " << patient.age << "\n" << patient.address
-                    << "\n" << patient.mobileNumber << "\n" << patient.symptoms << "\n";
+            outFile << patient.name << " " << patient.age << " " << patient.address
+                    << " " << patient.mobileNumber << " " << patient.symptoms << "\n";
         }
         outFile.close();
         cout << "Patient data saved to 'patients.txt'.\n";
@@ -55,17 +55,9 @@ void loadPatientsFromFile(vector<Patient> &patients)
 
         while (inFile >> name >> age)
         {
-            // Consume the newline character after age
-            inFile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-            // Read the entire line for address
-            getline(inFile, address);
-
-            // Read the entire line for mobileNumber
-            getline(inFile, mobileNumber);
-
-            // Read the entire line for symptoms
-            getline(inFile, symptoms);
+            getline(inFile >> ws, address);
+            inFile >> mobileNumber;
+            getline(inFile >> ws, symptoms);
 
             patients.push_back(Patient(name, age, address, mobileNumber, symptoms));
         }
@@ -180,8 +172,8 @@ int main()
 
     } while (choice != '3');
 
-    displayContentsOfFile();
+    
+    // displayContentsOfFile();
 
     return 0;
 }
-
