@@ -20,7 +20,7 @@ This project aims to develop management systems for both hospitals and hotels, p
 - **Housekeeping Management**: Coordinate housekeeping tasks such as cleaning schedules, room inspections, and maintenance requests.
 - **Inventory and Stock Control**: Track inventory of amenities, toiletries, and other supplies to avoid shortages and optimize purchasing.
 
-<br>THE ABOVE CONTENT CAN BE ADDED BUT ALL THE ABOVE FEATURES HAVENT BEEN ADDED <\br>
+**THE ABOVE CONTENT CAN BE ADDED BUT ALL THE ABOVE FEATURES HAVENT BEEN ADDED**
 
 ## Installation
 
